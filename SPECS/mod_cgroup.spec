@@ -11,7 +11,7 @@
 
 Name:   mod_cgroup
 Version:  2.0
-Release:  0%{?dist}
+Release:  1%{?dist}
 Summary:  Control group support for Apache 2
 Group:    System Environment/Daemons
 License:  LGPL 3.0
@@ -22,6 +22,7 @@ Source2:  mod_cgroup.te
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(id -nu)
 BuildRequires:  httpd-devel >= 2.4, pkgconfig, fail2ban
 Requires: httpd-mmn = %{_httpd_mmn}
+Requires: libcgroup >= 2.0
 
 %description
 mod_cgroup provides a system administrator with the capability to provide 
